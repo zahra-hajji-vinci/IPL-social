@@ -11,4 +11,11 @@ export class PasswordChecker {
     minimumOneNumber(password) {
         return password.match(/[0-9]/) ? "contains number" : "does not contain number";
     }
+
+    notContainsIPL(password) {
+        if (password.match(/ipl/i)) {
+            return "contains IPL";
+        }
+        return("does not contain IPL");
+    }
 }

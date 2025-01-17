@@ -56,4 +56,26 @@ describe("Minimum one number", function () {
 
         expect(result).toBe("does not contain number");
     });
+
 });
+
+describe("Not contains IPL", function () {
+
+    it("should return 'contains IPL' when the password contains IPL", function () {
+        const password = "passwordIPL";
+
+        let result = new PasswordChecker().notContainsIPL(password);
+
+        expect(result).toBe("contains IPL");
+    });
+
+    it("should return 'does not contain IPL' when the password does not contain IPL", function () {
+        const password = "password";
+
+        let result = new PasswordChecker().notContainsIPL(password);
+
+        expect(result).toBe("does not contain IPL");
+    });
+
+});
+
