@@ -1,0 +1,19 @@
+{
+  "name": "tdd-ipl",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine",
+    "build": "echo 'No build step defined'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^5.5.0"
+  },
+  "dependencies": {
+    "tdd-ipl": "file:"
+  }
+}
