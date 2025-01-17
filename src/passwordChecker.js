@@ -9,11 +9,6 @@ export class PasswordChecker {
     }
 
     minimumOneNumber(password) {
-        if(password.match(/[0-9]/)) {
-            return "contains number";
-        }
-        if(password.match(/[a-zA-Z]/)) {
-            return "does not contain number";
-        }
+        return password.match(/[0-9]/) ? "contains number" : "does not contain number";
     }
 }
