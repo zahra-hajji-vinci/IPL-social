@@ -16,5 +16,6 @@ export class PasswordChecker {
         if (password.match(/ipl/i)) {
             return "contains IPL";
         }
+        return("does not contain IPL");
     }
 }

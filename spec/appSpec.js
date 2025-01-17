@@ -68,6 +68,14 @@ describe("Not contains IPL", function () {
 
         expect(result).toBe("contains IPL");
     });
-    
+
+    it("should return 'does not contain IPL' when the password does not contain IPL", function () {
+        const password = "password";
+
+        let result = new PasswordChecker().notCountainsIPL(password);
+
+        expect(result).toBe("does not contain IPL");
+    });
+
 });
 
