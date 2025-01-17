@@ -4,5 +4,10 @@ export class PasswordChecker {
         return password.length >= 8 ? "good" : "bad";
     }
 
+    specialCharacter(password) {
+        if (password.match(/[!@#$%^&*(),.?":{}|<>]/)) {
+            return "good";
+        }
+    }
 
 }

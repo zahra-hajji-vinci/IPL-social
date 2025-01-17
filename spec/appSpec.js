@@ -1,6 +1,6 @@
 import { PasswordChecker } from "../src/passwordChecker.js";
 
-describe("PasswordChecker", function () {
+describe("Mininum 8 character", function () {
    
     it("should return 'good' when the password is >= 8", function () {
         const password = "password";
@@ -18,3 +18,16 @@ describe("PasswordChecker", function () {
         expect(result).toBe("bad");
     });
 });
+
+describe("Special character", function () { 
+
+    it("should return 'good' when the password contains special character", function () {
+        const password = "password@";
+
+        let result = new PasswordChecker().specialCharacter(password);
+
+        expect(result).toBe("good");
+    });
+
+});
+
