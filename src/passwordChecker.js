@@ -12,7 +12,7 @@ export class PasswordChecker {
         return password.match(/[0-9]/) ? "contains number" : "does not contain number";
     }
 
-    notCountainsIPL(password) {
+    notContainsIPL(password) {
         if (password.match(/ipl/i)) {
             return "contains IPL";
         }
