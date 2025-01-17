@@ -79,3 +79,22 @@ describe("Not contains IPL", function () {
 
 });
 
+describe("Verify password", function () {
+
+    it("should return 'good password' when the password is valid", function () {
+        const password = "password@1";
+
+        let result = new PasswordChecker().verifyPassword(password);
+
+        expect(result).toBe("good password");
+    });
+
+    it("should return 'bad password' when the password is invalid", function () {
+        const password = "password";
+
+        let result = new PasswordChecker().verifyPassword(password);
+
+        expect(result).toBe("bad password");
+    });
+});
+
