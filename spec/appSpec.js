@@ -39,3 +39,21 @@ describe("Special character", function () {
 
 });
 
+describe("Minimum one number", function () {
+
+    it("should return 'contains number' when the password contains number", function () {
+        const password = "password1";
+
+        let result = new PasswordChecker().minimumOneNumber(password);
+
+        expect(result).toBe("contains number");
+    });
+
+    it("should return 'does not contain number' when the password does not contain number", function () {
+        const password = "password";
+
+        let result = new PasswordChecker().minimumOneNumber(password);
+
+        expect(result).toBe("does not contain number");
+    });
+});

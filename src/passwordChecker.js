@@ -8,4 +8,7 @@ export class PasswordChecker {
         return password.match(/[!@#$%^&*(),.?":{}|<>]/) ? "contains special character" : "does not countains special character";
     }
 
+    minimumOneNumber(password) {
+        return password.match(/[0-9]/) ? "contains number" : "does not contain number";
+    }
 }
