@@ -10,4 +10,11 @@ describe("PasswordChecker", function () {
         expect(result).toBe("good");
     });
 
+    it("should return 'bad' when the password is < 8", function () {    
+        const password = "pass";
+
+        let result = new PasswordChecker().minimum8Characters(password);
+
+        expect(result).toBe("bad");
+    });
 });
