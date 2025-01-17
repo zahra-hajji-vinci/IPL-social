@@ -5,12 +5,7 @@ export class PasswordChecker {
     }
 
     specialCharacter(password) {
-        if (password.match(/[!@#$%^&*(),.?":{}|<>]/)) {
-            return "countain special character";
-        }
-        if (!password.match(/[!@#$%^&*(),.?":{}|<>]/)) {
-            return "does not countain special character";
-        }
+        return password.match(/[!@#$%^&*(),.?":{}|<>]/) ? "contains special character" : "does not countains special character";
     }
 
 }

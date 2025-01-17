@@ -21,20 +21,20 @@ describe("Mininum 8 character", function () {
 
 describe("Special character", function () { 
 
-    it("should return 'countain special character' when the password contains special character", function () {
+    it("should return 'contains special character' when the password contains special character", function () {
         const password = "password@";
 
         let result = new PasswordChecker().specialCharacter(password);
 
-        expect(result).toBe("countain special character");
+        expect(result).toBe("contains special character");
     });
 
-    it("should return 'does not countain special character' when the password does not contain special character", function () {
+    it("should return 'does not ccontains special character' when the password does not contain special character", function () {
         const password = "password";
 
         let result = new PasswordChecker().specialCharacter(password);
 
-        expect(result).toBe('does not countain special character');
+        expect(result).toBe('does not countains special character');
     });
 
 });
