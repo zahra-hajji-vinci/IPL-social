@@ -48,4 +48,12 @@ describe("Minimum one number", function () {
 
         expect(result).toBe("contains number");
     });
+
+    it("should return 'does not contain number' when the password does not contain number", function () {
+        const password = "password";
+
+        let result = new PasswordChecker().minimumOneNumber(password);
+
+        expect(result).toBe("does not contain number");
+    });
 });

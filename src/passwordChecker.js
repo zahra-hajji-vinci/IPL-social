@@ -12,5 +12,8 @@ export class PasswordChecker {
         if(password.match(/[0-9]/)) {
             return "contains number";
         }
+        if(password.match(/[a-zA-Z]/)) {
+            return "does not contain number";
+        }
     }
 }
