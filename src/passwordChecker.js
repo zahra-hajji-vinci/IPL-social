@@ -18,4 +18,16 @@ export class PasswordChecker {
         }
         return("does not contain IPL");
     }
+
+    verifyPassword(password) {
+            const isLengthValid = this.minimum8Characters(password) === "good length";
+            const hasSpecialChar = this.specialCharacter(password) === "contains special character";
+            const hasNumber = this.minimumOneNumber(password) === "contains number";
+            const doesNotContainIPL = this.notContainsIPL(password) === "does not contain IPL";
+
+            if (isLengthValid && hasSpecialChar && hasNumber && doesNotContainIPL) {
+                return "good password";
+            }
+            return "bad password";
+        }
 }
